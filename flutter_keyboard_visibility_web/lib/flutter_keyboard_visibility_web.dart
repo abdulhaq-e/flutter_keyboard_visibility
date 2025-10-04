@@ -4,16 +4,16 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 /// The web implementation of the [FlutterKeyboardVisibilityPlatform] of the
 /// FlutterKeyboardVisibility plugin.
-class FlutterKeyboardVisibilityPluginWeb
+class FlutterKeyboardVisibilityPlugin
     extends FlutterKeyboardVisibilityPlatform {
-  /// Constructs a [FlutterKeyboardVisibilityPluginWeb].
-  FlutterKeyboardVisibilityPluginWeb(web.Navigator navigator);
+  /// Constructs a [FlutterKeyboardVisibilityPlugin].
+  FlutterKeyboardVisibilityPlugin(web.Navigator navigator);
 
   /// Factory method that initializes the FlutterKeyboardVisibility plugin
   /// platform with an instance of the plugin for the web.
   static void registerWith(Registrar registrar) {
     FlutterKeyboardVisibilityPlatform.instance =
-        FlutterKeyboardVisibilityPluginWeb(web.window.navigator);
+        FlutterKeyboardVisibilityPlugin(web.window.navigator);
   }
 
   /// Emits changes to keyboard visibility from the platform. Web is not
